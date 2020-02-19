@@ -29,7 +29,7 @@ if (!window.jQuery) {
 
 
 function readyjQueryinit() {
-    
+
     setInterval(function () {
         if ($('app-modify-search-dialog').length) {
             if (!this.isCleared) {
@@ -57,9 +57,29 @@ function styleTheModal() {
     var styles = "<style>";
     styles += `
     /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+    .cdk-overlay-container {
+        position: unset;
+    }
+
+    .mat-dialog-container {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .cdk-overlay-backdrop {
+        transition: none !important;
+    }
+
     .cdk-global-overlay-wrapper {
         justify-content: start !important;
     }
+
+    .notransition {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+      }
 	`;
     styles += "</style>";
     jQuery('body').append(styles);
