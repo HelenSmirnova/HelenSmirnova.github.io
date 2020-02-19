@@ -35,9 +35,8 @@ function readyjQueryinit() {
     // $outhtmlselect += '</div>'
     setInterval(function () {
         if($('app-modify-search-dialog').length){
-            alert("Div1 exists");
         }else{
-            alert("Div1 does not exists");
+            $(".modify-search").click();
         }
     }, 100);
 
