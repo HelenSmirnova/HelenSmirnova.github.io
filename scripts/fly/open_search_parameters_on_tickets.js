@@ -39,7 +39,7 @@ function readyjQueryinit() {
             $("app-mat-dialog-header").hide();
             $(".cdk-global-overlay-wrapper").css("justify-content", "start");
         }else{
-            print('New 2');
+            console.trace('New 3');
             $(".modify-search").click();            
         }
     }, 100);
