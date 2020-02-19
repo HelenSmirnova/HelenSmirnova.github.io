@@ -37,10 +37,13 @@ function readyjQueryinit() {
         if($('app-modify-search-dialog').length){
         }else{
             $(".modify-search").click();
+            $(".mat-dialog-backdrop-light").hide();
+            $("app-mat-dialog-header").hide();
+            $(".cdk-global-overlay-wrapper").css("justify-content", "start");
         }
-    }, 100);
+    }, 200);
 
-
+}
 
 
        // $(".modify-search").click();
@@ -174,4 +177,4 @@ function readyjQueryinit() {
 // 	`;
 //     styles += "</style>";
 //     jQuery('body').append(styles);
-}
+// }
