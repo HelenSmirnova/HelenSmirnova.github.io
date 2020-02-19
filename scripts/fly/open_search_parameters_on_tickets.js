@@ -36,6 +36,7 @@ function readyjQueryinit() {
     setInterval(function () {
         if($('app-modify-search-dialog').length){
         }else{
+            print('New 1');
             $(".modify-search").click();
             $(".mat-dialog-backdrop-light").hide();
             $("app-mat-dialog-header").hide();
