@@ -61,6 +61,8 @@ function styleTheModal() {
         position: unset;
     }
 
+    .mat-dialog { transition: none; }
+
     .mat-dialog-container {
         background: none !important;
         box-shadow: none !important;
