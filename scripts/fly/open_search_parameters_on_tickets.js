@@ -35,14 +35,14 @@ function readyjQueryinit() {
     // $outhtmlselect += '</div>'
     setInterval(function () {
         if($('app-modify-search-dialog').length){
-        }else{
-            print('New 1');
-            $(".modify-search").click();
             $(".mat-dialog-backdrop-light").hide();
             $("app-mat-dialog-header").hide();
             $(".cdk-global-overlay-wrapper").css("justify-content", "start");
+        }else{
+            print('New 2');
+            $(".modify-search").click();            
         }
-    }, 200);
+    }, 100);
 
 }
 
