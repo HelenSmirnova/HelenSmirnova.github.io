@@ -16,6 +16,9 @@ function initjQuery(callback) {
     script.src = '//code.jquery.com/jquery-3.3.1.min.js';
     document.getElementsByTagName("head")[0].appendChild(script);
 }
+
+var isClicked = false;
+var isCleared = false;
 if (!window.jQuery) {
     initjQuery(function () {
         readyjQueryinit();
@@ -23,6 +26,8 @@ if (!window.jQuery) {
 } else {
     readyjQueryinit();
 }
+
+
 function readyjQueryinit() {
     
 
@@ -33,17 +38,29 @@ function readyjQueryinit() {
 
     // $outhtmlselect = '<div class="ab_select_btn">Выбрать'
     // $outhtmlselect += '</div>'
+  
     setInterval(function () {
         if($('app-modify-search-dialog').length){
-            $(".mat-dialog-backdrop-light").hide();
-            $("app-mat-dialog-header").hide();
-            $(".cdk-global-overlay-wrapper").css("justify-content", "start");
+            if(!this.isCleared) {
+               this.styleTheModal();
+            }
+           
         }else{
-            console.trace('New 3');
-            $(".modify-search").click();            
+            console.trace('New 4');
+            if(!this.isClicked) {
+                 $(".modify-search").click();
+                 this.isClicked = true;
+            }       
         }
     }, 100);
 
+}
+
+function styleTheModal() {
+    $(".mat-dialog-backdrop-light").hide();
+    $("app-mat-dialog-header").hide();
+    $(".cdk-global-overlay-wrapper").css("justify-content", "start");     
+    this.isCleared = true;
 }
 
 
