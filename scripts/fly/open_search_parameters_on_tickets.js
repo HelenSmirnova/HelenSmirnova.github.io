@@ -31,7 +31,7 @@ if (!window.jQuery) {
 function readyjQueryinit() {
 
     setInterval(function () {
-        if ($('app-modify-search-dialog').length) {
+        if ($('app-modify-search-dialog').length && $('app-modify-search-dialog').css('opacity') == 1) {
             if (!this.isCleared) {
                 this.styleTheModal();
                 this.isClicked = false;
@@ -64,6 +64,7 @@ function styleTheModal() {
     .mat-dialog-container {
         background: none !important;
         box-shadow: none !important;
+        transition: none !important;
     }
 
     .cdk-overlay-backdrop {
