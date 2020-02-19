@@ -31,7 +31,7 @@ if (!window.jQuery) {
 function readyjQueryinit() {
 
     setInterval(function () {
-        if ($('app-modify-search-dialog').length && $('app-modify-search-dialog').css('opacity') == 1) {
+        if ($('app-modify-search-dialog').length) {
             if (!this.isCleared) {
                 this.styleTheModal();
                 this.isClicked = false;
