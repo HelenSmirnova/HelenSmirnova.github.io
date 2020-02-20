@@ -46,7 +46,7 @@ function start() {
                     this.styleTheModal();
                     this.isClicked = false;
                     this.isCleared = true;
-                    setTimeout(this.hideLoaderScreen, 3000);
+                    setTimeout(this.hideLoaderScreen, 1000);
                 }
 
             } else {
@@ -54,14 +54,14 @@ function start() {
                 if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {                    
                     setTimeout(function () {
                         $(".modify-search").click();
-                    }, 2000);
+                    }, 3000);
                     this.isClicked = true;
                     this.isCleared = false;
                 }
             }
         }, 100);
 
-    }, 2000);
+    }, 1000);
 }
 
 function showLoaderScreen(callback) {
