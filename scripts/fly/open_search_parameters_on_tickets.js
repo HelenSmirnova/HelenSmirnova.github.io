@@ -54,7 +54,7 @@ function start() {
                 if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {                    
                     setTimeout(function () {
                         $(".modify-search").click();
-                    },2000);
+                    },3000);
                     this.isClicked = true;
                     this.isCleared = false;
                 }
