@@ -54,14 +54,14 @@ function start() {
                 if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {                    
                     setTimeout(function () {
                         $(".modify-search").click();
-                    }, 1500);
+                    },2000);
                     this.isClicked = true;
                     this.isCleared = false;
                 }
             }
         }, 100);
 
-    }, 2000);
+    }, 1000);
 }
 
 function showLoaderScreen(callback) {
