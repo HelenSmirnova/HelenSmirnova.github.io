@@ -46,7 +46,7 @@ function start() {
                     this.styleTheModal();
                     this.isClicked = false;
                     this.isCleared = true;
-                    setTimeout(this.hideLoaderScreen, 1000);
+                    setTimeout(this.hideLoaderScreen, 3000);
                 }
 
             } else {
@@ -59,7 +59,7 @@ function start() {
             }
         }, 100);
 
-    }, 2000);
+    }, 3000);
 }
 
 function showLoaderScreen(callback) {
