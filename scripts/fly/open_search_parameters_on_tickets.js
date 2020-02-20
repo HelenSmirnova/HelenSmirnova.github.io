@@ -57,10 +57,7 @@ function hideLoaderScreen() {
 }
 
 function showLoaderScreen() {
-    jQuery('<div/>', {
-        "class": 'loader-screen',
-         title: 'now this div has a title!'
-    }).appendTo('body');
+    $("body").append('<div class="loader-screen">HELLO<div/>');
 }
 
 function styleTheModal() {
