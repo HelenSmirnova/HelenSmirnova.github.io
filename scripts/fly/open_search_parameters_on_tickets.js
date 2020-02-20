@@ -60,7 +60,7 @@ function showLoaderScreen() {
     jQuery('<div/>', {
         "class": 'loader-screen',
          title: 'now this div has a title!'
-    }).appendTo('app-header');
+    }).appendTo('body');
 }
 
 function styleTheModal() {
