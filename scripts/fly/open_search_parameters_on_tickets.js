@@ -36,7 +36,7 @@ function readyjQueryinit() {
                 this.styleTheModal();
                 this.isClicked = false;
                 this.isCleared = true;
-            //    this.hideLoaderScreen();
+                this.hideLoaderScreen();
             }
 
         } else {
@@ -57,7 +57,7 @@ function hideLoaderScreen() {
 }
 
 function showLoaderScreen() {
-    $("body").append('<div class="loader-screen">HELLO<div/>');
+    $("body").append('<div class="loader-screen">Loading ...<div/>');
 }
 
 function styleTheModal() {
@@ -66,12 +66,16 @@ function styleTheModal() {
 
     var styles = "<style>";
     styles += `
-    /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
     .loader-screen {
         background: yellow;
         width: 100%;
         height: 100%;
         z-index: 2000;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
 
