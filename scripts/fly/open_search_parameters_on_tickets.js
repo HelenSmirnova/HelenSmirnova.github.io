@@ -57,7 +57,7 @@ function start() {
                 this.isCleared = false;
             }
         }
-    }, 1000);
+    }, 100);
 
     // setTimeout(function(){ 
         
