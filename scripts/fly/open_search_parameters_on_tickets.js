@@ -50,7 +50,7 @@ function readyjQueryinit() {
                     this.isCleared = false;
                 }
             }
-        }, 10);
+        }, 1000);
      }, 3000);
     }
 
