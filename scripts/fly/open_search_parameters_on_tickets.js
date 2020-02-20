@@ -46,8 +46,7 @@ function start() {
                     this.styleTheModal();
                     this.isClicked = false;
                     this.isCleared = true;
-                   // setTimeout(this.hideLoaderScreen, 2000);
-                    this.hideLoaderScreen();
+                    setTimeout(this.hideLoaderScreen, 1000);
                 }
 
             } else {
@@ -60,11 +59,11 @@ function start() {
             }
         }, 100);
 
-    }, 5000);
+    }, 2000);
 }
 
 function showLoaderScreen(callback) {
-    $("body").prepend('<div class="loader-screen">Loading ...<div/>');
+    $("body").apend('<div class="loader-screen">Loading ...<div/>');
     callback();
 }
 
