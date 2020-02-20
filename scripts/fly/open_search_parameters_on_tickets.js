@@ -37,12 +37,12 @@ function readyjQueryinit() {
                 this.styleTheModal();
                 this.isClicked = false;
                 this.isCleared = true;
-                this.hideLoaderScreen();
+              //  this.hideLoaderScreen();
             }
 
         } else {
             console.trace('New 5');
-            if (!this.isClicked) {
+            if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
               //  this.showLoaderScreen();
                 $(".modify-search").click();
                 this.isClicked = true;
