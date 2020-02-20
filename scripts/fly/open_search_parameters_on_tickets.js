@@ -61,7 +61,7 @@ function start() {
             }
         }, 100);
 
-    }, 1000);
+    }, 2000);
 }
 
 function showLoaderScreen(callback) {
