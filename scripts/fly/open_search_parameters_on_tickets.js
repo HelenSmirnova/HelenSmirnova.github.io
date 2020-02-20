@@ -30,6 +30,7 @@ if (!window.jQuery) {
 
 
 function readyjQueryinit() {
+    this.showLoaderScreen();
     setInterval(function () {
         if ($('app-modify-search-dialog').length) {
             if (!this.isCleared) {
@@ -42,7 +43,7 @@ function readyjQueryinit() {
         } else {
             console.trace('New 5');
             if (!this.isClicked) {
-                this.showLoaderScreen();
+              //  this.showLoaderScreen();
                 $(".modify-search").click();
                 this.isClicked = true;
                 this.isCleared = false;
