@@ -51,15 +51,17 @@ function start() {
 
             } else {
                 console.trace('New 5');
-                if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
-                    $(".modify-search").click();
+                if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {                    
+                    setTimeout(function () {
+                        $(".modify-search").click();
+                    }, 2000);
                     this.isClicked = true;
                     this.isCleared = false;
                 }
             }
         }, 100);
 
-    }, 3000);
+    }, 2000);
 }
 
 function showLoaderScreen(callback) {
