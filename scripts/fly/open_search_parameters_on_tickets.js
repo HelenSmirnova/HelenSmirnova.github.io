@@ -37,7 +37,7 @@ function readyjQueryinit() {
                 this.styleTheModal();
                 this.isClicked = false;
                 this.isCleared = true;
-               // this.hideLoaderScreen();
+                this.hideLoaderScreen();
             }
 
         } else {
