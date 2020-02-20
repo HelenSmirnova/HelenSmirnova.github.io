@@ -51,7 +51,7 @@ function readyjQueryinit() {
                 }
             }
         }, 1000);
-     }, 3000);
+     }, 5000);
     }
 
 
