@@ -53,7 +53,7 @@ function readyjQueryinit() {
 }
 
 function hideLoaderScreen() {
-    $( ".loader-screen" ).remove();
+    $(".loader-screen").hide();
 }
 
 function showLoaderScreen() {
