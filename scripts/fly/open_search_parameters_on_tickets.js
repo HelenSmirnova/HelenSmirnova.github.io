@@ -63,7 +63,7 @@ function start() {
 }
 
 function showLoaderScreen(callback) {
-    $("body").apend('<div class="loader-screen">Loading ...<div/>');
+    $("body").append('<div class="loader-screen">Loading ...<div/>');
     callback();
 }
 
