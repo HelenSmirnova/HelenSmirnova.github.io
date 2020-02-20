@@ -30,8 +30,8 @@ if (!window.jQuery) {
 
 
 function readyjQueryinit() {
-    this.showLoaderScreen(this.start);    
-    }
+    this.showLoaderScreen(this.start);
+}
 
 
 function hideLoaderScreen() {
@@ -39,29 +39,28 @@ function hideLoaderScreen() {
 }
 
 function start() {
-    setInterval(function () {
-        if ($('app-modify-search-dialog').length) {
-            if (!this.isCleared) {
-                this.styleTheModal();
-                this.isClicked = false;
-                this.isCleared = true;
-                setTimeout(this.hideLoaderScreen, 2000);
-              //  this.hideLoaderScreen();
-            }
+    setTimeout(function () {
+        setInterval(function () {
+            if ($('app-modify-search-dialog').length) {
+                if (!this.isCleared) {
+                    this.styleTheModal();
+                    this.isClicked = false;
+                    this.isCleared = true;
+                   // setTimeout(this.hideLoaderScreen, 2000);
+                    this.hideLoaderScreen();
+                }
 
-        } else {
-            console.trace('New 5');
-            if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
-                $(".modify-search").click();
-                this.isClicked = true;
-                this.isCleared = false;
+            } else {
+                console.trace('New 5');
+                if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
+                    $(".modify-search").click();
+                    this.isClicked = true;
+                    this.isCleared = false;
+                }
             }
-        }
-    }, 100);
+        }, 100);
 
-    // setTimeout(function(){ 
-        
-    //  }, 5000);
+    }, 5000);
 }
 
 function showLoaderScreen(callback) {
