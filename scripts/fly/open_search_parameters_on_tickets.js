@@ -17,6 +17,7 @@ function initjQuery(callback) {
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
+var showLockScreen = true;
 var isClicked = false;
 var isCleared = false;
 if (!window.jQuery) {
@@ -29,25 +30,37 @@ if (!window.jQuery) {
 
 
 function readyjQueryinit() {
-
     setInterval(function () {
         if ($('app-modify-search-dialog').length) {
             if (!this.isCleared) {
                 this.styleTheModal();
                 this.isClicked = false;
                 this.isCleared = true;
+            //    this.hideLoaderScreen();
             }
 
         } else {
             console.trace('New 5');
             if (!this.isClicked) {
+                this.showLoaderScreen();
                 $(".modify-search").click();
                 this.isClicked = true;
                 this.isCleared = false;
             }
         }
-    }, 100);
+    }, 10);
 
+}
+
+function hideLoaderScreen() {
+    $( ".loader-screen" ).remove();
+}
+
+function showLoaderScreen() {
+    jQuery('<div/>', {
+        "class": 'loader-screen',
+         title: 'now this div has a title!'
+    }).appendTo('app-header');
 }
 
 function styleTheModal() {
@@ -57,6 +70,14 @@ function styleTheModal() {
     var styles = "<style>";
     styles += `
     /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+    .loader-screen {
+        background: yellow;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+      }
+
+
     .cdk-overlay-container {
         position: unset;
     }
