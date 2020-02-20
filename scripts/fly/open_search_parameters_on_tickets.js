@@ -30,27 +30,66 @@ if (!window.jQuery) {
 
 
 function readyjQueryinit() {
-    this.showLoaderScreen();
-    setInterval(function () {
-        if ($('app-modify-search-dialog').length) {
-            if (!this.isCleared) {
-                this.styleTheModal();
-                this.isClicked = false;
-                this.isCleared = true;
-                this.hideLoaderScreen();
-            }
-
-        } else {
-            console.trace('New 5');
-            if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
-                $(".modify-search").click();
-                this.isClicked = true;
-                this.isCleared = false;
-            }
-        }
-    }, 10);
+    // this.start();
+    // setTimeout(function(){ 
+    //     setInterval(function () {
+    //         if ($('app-modify-search-dialog').length) {
+    //             if (!this.isCleared) {
+    //                 this.styleTheModal();
+    //                 this.isClicked = false;
+    //                 this.isCleared = true;
+    //                 this.hideLoaderScreen();
+    //             }
+    
+    //         } else {
+    //             console.trace('New 5');
+    //             if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
+    //                 $(".modify-search").click();
+    //                 this.isClicked = true;
+    //                 this.isCleared = false;
+    //             }
+    //         }
+    //     }, 10);
+    //  }, 3000);
+    this.start().pipe(runInterval);
+   
 
 }
+
+function start(){
+    var d = $.Deferred();
+    setTimeout(function() {
+      this.showLoaderScreen();
+      d.resolve();
+    }, 1000);
+    return d.promise();
+  }
+
+  function runInterval(){
+    var d = $.Deferred();
+    setTimeout(function() {
+        setInterval(function () {
+            if ($('app-modify-search-dialog').length) {
+                if (!this.isCleared) {
+                    this.styleTheModal();
+                    this.isClicked = false;
+                    this.isCleared = true;
+                    this.hideLoaderScreen();
+                }
+    
+            } else {
+                console.trace('New 5');
+                if ((!this.isClicked) && !$('.modify-search').prop('disabled')) {
+                    $(".modify-search").click();
+                    this.isClicked = true;
+                    this.isCleared = false;
+                }
+            }
+        }, 10);
+      d.resolve();
+    }, 1000);
+    return d.promise();
+  }
 
 function hideLoaderScreen() {
     $(".loader-screen").hide();
